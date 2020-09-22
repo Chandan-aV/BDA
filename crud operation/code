@@ -1,0 +1,33 @@
+show dbs
+use college
+db.createCollection("Student");
+db.createCollection("Faculty");
+db.createCollection("COE");
+db.createCollection("Library");
+db.createCollection("Admission");
+show collections
+db.Student.insertOne({usn:"1BM17CS001",name:"Anzi",DOB:"05-07-1999",Department:"CSE",section:"A",Batch:2021})
+db.Student.insertOne({usn:"1BM17CS002",name:"Mona",DOB:"14-08-1999",Department:"CSE",section:"B",Batch:2021})
+db.Student.insertOne({usn:"1BM17CS003",name:"Siri",DOB:"03-11-1999",Department:"ISE",section:"C",Batch:2021})
+db.Student.insertOne({usn:"1BM17CS004",name:"Brinda",DOB:"21-01-1999",Department:"ECE",section:"A",Batch:2021})
+db.Student.find().pretty()
+db.Faculty.insertOne({Name:"Zayn",Department:"CSE",Subject:"Cloud Computing",Experience:5,Qualification:"Ph.D"})
+db.Faculty.insertOne({Name:"Harry",Department:"ISE",Subject:"Big data analytics",Experience:7,Qualification:"M.Tech"})
+db.Faculty.insertOne({Name:"Louise",Department:"ECE",Subject:"Analog Communication",Experience:10,Qualification:"Ph.D"})
+db.Faculty.insertOne({Name:"Markel",Department:"CSE",Subject:"IOT",Experience:12,Qualification:"M.Tech"})
+db.Faculty.find().pretty()
+db.COE.insertOne({ID:"A101",Name:"Kendel",Age:40,Role:"Coordinator",Experience:12,Nationality:"Indian"})
+db.COE.insertOne({ID:"A102",Name:"Mary",Age:35,Role:"Supervisor",Experience:10,Nationality:"Indian"})
+db.COE.insertOne({ID:"A103",Name:"Kanishka",Age:38,Role:"Executive",Experience:8,Nationality:"Indian"})
+db.COE.insertOne({ID:"A104",Name:"Rahul",Age:55,Role:"Coordinator",Experience:15,Nationality:"Indian"})
+db.COE.find().pretty()
+db.Library.insertOne({Librarian:"Preeti",ID:"B121",BookId:1234,BookName:"Networking and communication",Genre:"Education",issued:"12-01-2020"})
+db.Library.insertOne({Librarian:"Patil",ID:"B122",BookId:1244,BookName:" The Alchemist", Genre:"Fiction",issued:"16-03-2020 "})
+db.Library.insertOne({Librarian:"Malik",ID:"B123",BookId:1214,BookName:"Cloud Computing",Genre:"Education",issued:"22-01-2020"})
+db.Library.insertOne({Librarian:"Preeti",ID:"B121",BookId:1234,BookName:"Animal Farm" ,Genre:"Education",issued:"12-01-2020"})
+db.Library.find().pretty()
+db.Admission.insertOne({Name:"Lasya",ID:5676 , Branch:"CSE",Year:2017,Mobile No:9567895592,Status:"Approved"})
+db.Admission.insertOne({Name:"Manya    ",ID:5636 , Branch:"ISE",Year:2017,Mobile No:9894955921  ,Status:"Approved"})
+db.Admission.insertOne({Name:" Nihal",ID:5696 , Branch:"ECE",Year:2017,Mobile No:8767895592,Status:" Waiting "  })
+db.Admission.insertOne({Name:" Manish   ",ID:4676 , Branch:"ISE",Year:2017,Mobile No:9569076592,Status:"Approved"})
+db.Admission.find().pretty()
